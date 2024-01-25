@@ -9,8 +9,9 @@ exports.__esModule = true;
 exports.FormsComponent = void 0;
 var core_1 = require("@angular/core");
 var FormsComponent = /** @class */ (function () {
-    function FormsComponent(formBuilder) {
+    function FormsComponent(formBuilder, unitService) {
         this.formBuilder = formBuilder;
+        this.unitService = unitService;
         this.results = [];
     }
     FormsComponent.prototype.ngOnInit = function () {
@@ -20,7 +21,7 @@ var FormsComponent = /** @class */ (function () {
         });
     };
     FormsComponent.prototype.onSubmit = function () {
-        console.log(this.formGroup.value);
+        this.unitService.getAllUnits().subscribe(function (data) { return console.log(data); });
     };
     FormsComponent.prototype.onClean = function () {
         this.formGroup.reset();

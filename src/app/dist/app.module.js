@@ -14,6 +14,7 @@ var app_component_1 = require("./app.component");
 var header_component_1 = require("./components/header/header.component");
 var forms_component_1 = require("./components/forms/forms.component");
 var forms_1 = require("@angular/forms");
+var http_1 = require("@angular/common/http");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -27,7 +28,8 @@ var AppModule = /** @class */ (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 app_routing_module_1.AppRoutingModule,
-                forms_1.ReactiveFormsModule
+                forms_1.ReactiveFormsModule,
+                http_1.HttpClientModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]
